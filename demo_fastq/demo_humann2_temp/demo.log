@@ -1,0 +1,278 @@
+05/29/2020 09:48:12 PM - humann2.humann2 - INFO: Running humann2 v0.11.1
+05/29/2020 09:48:12 PM - humann2.humann2 - INFO: Output files will be written to: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq
+05/29/2020 09:48:12 PM - humann2.humann2 - INFO: Writing temp files to directory: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp
+05/29/2020 09:48:12 PM - humann2.utilities - INFO: File ( /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo.fastq ) is of format:  fastq
+05/29/2020 09:48:12 PM - humann2.utilities - DEBUG: Check software, bowtie2, for required version, 2.2
+05/29/2020 09:48:13 PM - humann2.utilities - INFO: Using bowtie2 version 2.2
+05/29/2020 09:48:13 PM - humann2.humann2 - INFO: Search mode set to uniref90 because a uniref90 translated search database is selected
+05/29/2020 09:48:13 PM - humann2.utilities - DEBUG: Check software, diamond, for required version, 0.8.22
+05/29/2020 09:48:13 PM - humann2.utilities - INFO: Using diamond version 0.8.36
+05/29/2020 09:48:13 PM - humann2.config - INFO: 
+Run config settings: 
+
+DATABASE SETTINGS
+nucleotide database folder = /home/mh_user/Desktop/tutorial10/humann2_database_downloads/chocophlan
+protein database folder = /home/mh_user/Desktop/tutorial10/humann2_database_downloads/uniref
+pathways database file 1 = /usr/local/lib/python2.7/dist-packages/humann2/data/pathways/metacyc_reactions_level4ec_only.uniref.bz2
+pathways database file 2 = /usr/local/lib/python2.7/dist-packages/humann2/data/pathways/metacyc_pathways_structured_filtered
+utility mapping database folder = /usr/local/lib/python2.7/dist-packages/humann2/data/misc
+
+RUN MODES
+resume = False
+verbose = False
+bypass prescreen = False
+bypass nucleotide index = False
+bypass nucleotide search = False
+bypass translated search = False
+translated search = diamond
+pick frames = off
+threads = 1
+
+SEARCH MODE
+search mode = uniref90
+identity threshold = 90.0
+
+ALIGNMENT SETTINGS
+evalue threshold = 1.0
+prescreen threshold = 0.01
+translated subject coverage threshold = 50.0
+translated query coverage threshold = 90.0
+
+PATHWAYS SETTINGS
+minpath = on
+xipe = off
+gap fill = on
+
+INPUT AND OUTPUT FORMATS
+input file format = fastq
+output file format = tsv
+output max decimals = 10
+remove stratified output = False
+remove column description output = False
+log level = DEBUG
+
+05/29/2020 09:48:13 PM - humann2.store - DEBUG: Initialize Alignments class instance to minimize memory use
+05/29/2020 09:48:13 PM - humann2.store - DEBUG: Initialize Reads class instance to minimize memory use
+05/29/2020 09:48:22 PM - humann2.humann2 - INFO: Load pathways database part 1: /usr/local/lib/python2.7/dist-packages/humann2/data/pathways/metacyc_reactions_level4ec_only.uniref.bz2
+05/29/2020 09:48:37 PM - humann2.humann2 - INFO: Load pathways database part 2: /usr/local/lib/python2.7/dist-packages/humann2/data/pathways/metacyc_pathways_structured_filtered
+05/29/2020 09:48:37 PM - humann2.search.prescreen - INFO: Running metaphlan2.py ........
+05/29/2020 09:48:37 PM - humann2.utilities - DEBUG: Using software: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/metaphlan2/metaphlan2.py
+05/29/2020 09:48:37 PM - humann2.utilities - INFO: Execute command: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/metaphlan2/metaphlan2.py /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo.fastq -t rel_ab --mpa_pkl /home/mh_user/Desktop/tutorial10/humann2_database_downloads/metaphlan2/db_v20/mpa_v20_m200.pkl --bowtie2db /home/mh_user/Desktop/tutorial10/humann2_database_downloads/metaphlan2/db_v20/mpa_v20_m200 -o /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_metaphlan_bugs_list.tsv --input_type multifastq --bowtie2out /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_metaphlan_bowtie2.txt
+05/29/2020 09:50:17 PM - humann2.utilities - DEBUG: 
+05/29/2020 09:50:17 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	prescreen 	:	 100	 seconds
+05/29/2020 09:50:17 PM - humann2.search.prescreen - INFO: Found g__Bacteroides.s__Bacteroides_dorei : 59.18% of mapped reads
+05/29/2020 09:50:17 PM - humann2.search.prescreen - INFO: Found g__Bacteroides.s__Bacteroides_vulgatus : 40.82% of mapped reads
+05/29/2020 09:50:17 PM - humann2.search.prescreen - INFO: Total species selected from prescreen: 2
+05/29/2020 09:50:17 PM - humann2.search.prescreen - DEBUG: Adding file to database: g__Bacteroides.s__Bacteroides_dorei.centroids.v0.1.1.ffn
+05/29/2020 09:50:17 PM - humann2.search.prescreen - DEBUG: Adding file to database: g__Bacteroides.s__Bacteroides_vulgatus.centroids.v0.1.1.ffn
+05/29/2020 09:50:17 PM - humann2.search.prescreen - INFO: Creating custom ChocoPhlAn database ........
+05/29/2020 09:50:17 PM - humann2.utilities - DEBUG: Using software: /bin/cat
+05/29/2020 09:50:17 PM - humann2.utilities - INFO: Execute command: /bin/cat /home/mh_user/Desktop/tutorial10/humann2_database_downloads/chocophlan/g__Bacteroides.s__Bacteroides_dorei.centroids.v0.1.1.ffn /home/mh_user/Desktop/tutorial10/humann2_database_downloads/chocophlan/g__Bacteroides.s__Bacteroides_vulgatus.centroids.v0.1.1.ffn
+05/29/2020 09:50:17 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	custom database creation 	:	 0	 seconds
+05/29/2020 09:50:17 PM - humann2.search.nucleotide - INFO: Running bowtie2-build ........
+05/29/2020 09:50:17 PM - humann2.utilities - DEBUG: Using software: /usr/local/bin/bowtie2-build
+05/29/2020 09:50:17 PM - humann2.utilities - INFO: Execute command: /usr/local/bin/bowtie2-build -f /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_custom_chocophlan_database.ffn /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_bowtie2_index
+05/29/2020 09:50:33 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	database index 	:	 16	 seconds
+05/29/2020 09:50:33 PM - humann2.search.nucleotide - DEBUG: Nucleotide input file is of type: fastq
+05/29/2020 09:50:33 PM - humann2.utilities - DEBUG: Using software: /usr/local/bin/bowtie2
+05/29/2020 09:50:33 PM - humann2.utilities - INFO: Execute command: /usr/local/bin/bowtie2 -q -x /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_bowtie2_index -U /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo.fastq -S /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_bowtie2_aligned.sam --very-sensitive
+05/29/2020 09:50:38 PM - humann2.utilities - DEBUG: 21000 reads; of these:
+  21000 (100.00%) were unpaired; of these:
+    4655 (22.17%) aligned 0 times
+    6018 (28.66%) aligned exactly 1 time
+    10327 (49.18%) aligned >1 times
+77.83% overall alignment rate
+
+05/29/2020 09:50:38 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	nucleotide alignment 	:	 5	 seconds
+05/29/2020 09:50:41 PM - humann2.search.nucleotide - DEBUG: Total nucleotide alignments not included based on small percent identities: 189
+05/29/2020 09:50:41 PM - humann2.search.nucleotide - DEBUG: Keeping sam file
+05/29/2020 09:50:41 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	nucleotide alignment post-processing 	:	 2	 seconds
+05/29/2020 09:50:41 PM - humann2.humann2 - INFO: Total bugs from nucleotide alignment: 2
+05/29/2020 09:50:41 PM - humann2.humann2 - INFO: 
+g__Bacteroides.s__Bacteroides_vulgatus: 7336 hits
+g__Bacteroides.s__Bacteroides_dorei: 8820 hits
+05/29/2020 09:50:41 PM - humann2.humann2 - INFO: Total gene families from nucleotide alignment: 3685
+05/29/2020 09:50:41 PM - humann2.humann2 - INFO: Unaligned reads after nucleotide alignment: 23.0666666667 %
+05/29/2020 09:50:41 PM - humann2.search.translated - INFO: Running diamond ........
+05/29/2020 09:50:41 PM - humann2.search.translated - INFO: Aligning to reference database: uniref90_demo_prots.dmnd
+05/29/2020 09:50:41 PM - humann2.utilities - DEBUG: Remove file: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/diamond_m8_8EIuup
+05/29/2020 09:50:41 PM - humann2.utilities - DEBUG: Using software: /usr/local/bin/diamond
+05/29/2020 09:50:41 PM - humann2.utilities - INFO: Execute command: /usr/local/bin/diamond blastx --query /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/demo_bowtie2_unaligned.fa --evalue 1.0 --threads 1 --max-target-seqs 20 --outfmt 6 --db /home/mh_user/Desktop/tutorial10/humann2_database_downloads/uniref/uniref90_demo_prots --out /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/diamond_m8_8EIuup --tmpdir /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: diamond v0.8.36.98 | by Benjamin Buchfink <buchfink@gmail.com>
+Check http://github.com/bbuchfink/diamond for updates.
+
+#CPU threads: 1
+Scoring parameters: (Matrix=BLOSUM62 Lambda=0.267 K=0.041 Penalties=11/1)
+#Target sequences to report alignments for: 20
+Temporary directory: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM
+Opening the database...  [0.000364s]
+Opening the input file...  [2e-05s]
+Opening the output file...  [1.3e-05s]
+Loading query sequences...  [0.019185s]
+Running complexity filter...  [0.127724s]
+Building query histograms...  [0.009213s]
+Allocating buffers...  [1.6e-05s]
+Loading reference sequences...  [0.06739s]
+Building reference histograms...  [0.431053s]
+Allocating buffers...  [1.8e-05s]
+Initializing temporary storage...  [0.000234s]
+Processing query chunk 0, reference chunk 0, shape 0, index chunk 0.
+Building reference index...  [0.364815s]
+Building query index...  [0.006474s]
+Building seed filter...  [0.018103s]
+Searching alignments...  [0.011333s]
+Processing query chunk 0, reference chunk 0, shape 0, index chunk 1.
+Building reference index...  [0.330423s]
+Building query index...  [0.007656s]
+Building seed filter...  [0.018013s]
+Searching alignments...  [0.012345s]
+Processing query chunk 0, reference chunk 0, shape 0, index chunk 2.
+Building reference index...  [0.419922s]
+Building query index...  [0.008272s]
+Building seed filter...  [0.022668s]
+Searching alignments...  [0.013508s]
+Processing query chunk 0, reference chunk 0, shape 0, index chunk 3.
+Building reference index...  [0.434072s]
+Building query index...  [0.006439s]
+Building seed filter...  [0.018784s]
+Searching alignments...  [0.011453s]
+Processing query chunk 0, reference chunk 0, shape 1, index chunk 0.
+Building reference index...  [0.266127s]
+Building query index...  [0.005963s]
+Building seed filter...  [0.01817s]
+Searching alignments...  [0.011694s]
+Processing query chunk 0, reference chunk 0, shape 1, index chunk 1.
+Building reference index...  [0.319866s]
+Building query index...  [0.00582s]
+Building seed filter...  [0.017429s]
+Searching alignments...  [0.010146s]
+Processing query chunk 0, reference chunk 0, shape 1, index chunk 2.
+Building reference index...  [0.393357s]
+Building query index...  [0.006375s]
+Building seed filter...  [0.017841s]
+Searching alignments...  [0.009841s]
+Processing query chunk 0, reference chunk 0, shape 1, index chunk 3.
+Building reference index...  [0.283929s]
+Building query index...  [0.006083s]
+Building seed filter...  [0.036111s]
+Searching alignments...  [0.028533s]
+Processing query chunk 0, reference chunk 0, shape 2, index chunk 0.
+Building reference index...  [0.337342s]
+Building query index...  [0.004355s]
+Building seed filter...  [0.024037s]
+Searching alignments...  [0.024885s]
+Processing query chunk 0, reference chunk 0, shape 2, index chunk 1.
+Building reference index...  [0.52712s]
+Building query index...  [0.00432s]
+Building seed filter...  [0.018645s]
+Searching alignments...  [0.010146s]
+Processing query chunk 0, reference chunk 0, shape 2, index chunk 2.
+Building reference index...  [0.315109s]
+Building query index...  [0.004504s]
+Building seed filter...  [0.017197s]
+Searching alignments...  [0.009788s]
+Processing query chunk 0, reference chunk 0, shape 2, index chunk 3.
+Building reference index...  [0.263843s]
+Building query index...  [0.004049s]
+Building seed filter...  [0.01725s]
+Searching alignments...  [0.00994s]
+Processing query chunk 0, reference chunk 0, shape 3, index chunk 0.
+Building reference index...  [0.261348s]
+Building query index...  [0.003145s]
+Building seed filter...  [0.017173s]
+Searching alignments...  [0.009418s]
+Processing query chunk 0, reference chunk 0, shape 3, index chunk 1.
+Building reference index...  [0.476539s]
+Building query index...  [0.008322s]
+Building seed filter...  [0.032749s]
+Searching alignments...  [0.011576s]
+Processing query chunk 0, reference chunk 0, shape 3, index chunk 2.
+Building reference index...  [0.430354s]
+Building query index...  [0.003696s]
+Building seed filter...  [0.017329s]
+Searching alignments...  [0.011034s]
+Processing query chunk 0, reference chunk 0, shape 3, index chunk 3.
+Building reference index...  [0.419126s]
+Building query index...  [0.003607s]
+Building seed filter...  [0.017665s]
+Searching alignments...  [0.012623s]
+Deallocating buffers...  [0.000977s]
+Computing alignments...  [0.020304s]
+Deallocating reference...  [0.000788s]
+Loading reference sequences...  [5e-06s]
+Deallocating buffers...  [2e-06s]
+Deallocating queries...  [4.3e-05s]
+Loading query sequences...  [5e-06s]
+Closing the input file...  [3e-06s]
+Closing the output file...  [8e-06s]
+Closing the database file...  [1e-06s]
+Total time = 7.15158s
+Reported 1261 pairwise alignments, 1261 HSSPs.
+993 queries aligned.
+
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Using software: /bin/cat
+05/29/2020 09:50:48 PM - humann2.utilities - INFO: Execute command: /bin/cat /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/diamond_m8_8EIuup
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	translated alignment 	:	 7	 seconds
+05/29/2020 09:50:48 PM - humann2.search.blastx_coverage - INFO: Total alignments without coverage information: 0
+05/29/2020 09:50:48 PM - humann2.search.blastx_coverage - INFO: Total proteins in blastx output: 43
+05/29/2020 09:50:48 PM - humann2.search.blastx_coverage - INFO: Total proteins without lengths: 0
+05/29/2020 09:50:48 PM - humann2.search.blastx_coverage - INFO: Proteins with coverage greater than threshold (50.0): 43
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total alignments where percent identity is not a number: 0
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total alignments where alignment length is not a number: 0
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total alignments where E-value is not a number: 0
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total translated alignments not included based on large e-value: 0
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total translated alignments not included based on small percent identity: 247
+05/29/2020 09:50:48 PM - humann2.utilities - DEBUG: Total translated alignments not included based on small query coverage: 206
+05/29/2020 09:50:48 PM - humann2.search.translated - DEBUG: Total translated alignments not included based on small subject coverage value: 0
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	translated alignment post-processing 	:	 0	 seconds
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: Total bugs after translated alignment: 3
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: 
+g__Bacteroides.s__Bacteroides_vulgatus: 7336 hits
+unclassified: 974 hits
+g__Bacteroides.s__Bacteroides_dorei: 8820 hits
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: Total gene families after translated alignment: 3728
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: Unaligned reads after translated alignment: 18.5571428571 %
+05/29/2020 09:50:48 PM - humann2.humann2 - INFO: Computing gene families ...
+05/29/2020 09:50:48 PM - humann2.quantify.families - DEBUG: Compute gene families
+05/29/2020 09:50:48 PM - humann2.store - INFO: 
+Total gene families  : 3728
+g__Bacteroides.s__Bacteroides_vulgatus : 2134 gene families
+unclassified : 43 gene families
+g__Bacteroides.s__Bacteroides_dorei : 2558 gene families
+05/29/2020 09:51:40 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	computing gene families 	:	 52	 seconds
+05/29/2020 09:51:40 PM - humann2.humann2 - INFO: Computing pathways abundance and coverage ...
+05/29/2020 09:51:40 PM - humann2.quantify.modules - DEBUG: Write flat reactions to pathways file for Minpath
+05/29/2020 09:51:40 PM - humann2.quantify.modules - INFO: Compute reaction scores for bug: g__Bacteroides.s__Bacteroides_vulgatus
+05/29/2020 09:51:41 PM - humann2.quantify.modules - INFO: Run MinPath on g__Bacteroides.s__Bacteroides_vulgatus
+05/29/2020 09:51:41 PM - humann2.quantify.modules - INFO: Compute reaction scores for bug: unclassified
+05/29/2020 09:51:42 PM - humann2.quantify.modules - INFO: Run MinPath on unclassified
+05/29/2020 09:51:42 PM - humann2.quantify.modules - INFO: Compute reaction scores for bug: all
+05/29/2020 09:51:44 PM - humann2.quantify.modules - INFO: Run MinPath on all
+05/29/2020 09:51:44 PM - humann2.quantify.modules - INFO: Compute reaction scores for bug: g__Bacteroides.s__Bacteroides_dorei
+05/29/2020 09:51:45 PM - humann2.quantify.modules - INFO: Run MinPath on g__Bacteroides.s__Bacteroides_dorei
+05/29/2020 09:51:45 PM - humann2.utilities - DEBUG: Using python module : /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py
+05/29/2020 09:51:45 PM - humann2.utilities - INFO: Execute command: /usr/bin/python /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py -any /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpFvQMjR -map /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp7WBdrM -report /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpiSg1EB -details /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpxgteLY -mps /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp6S3m2V
+05/29/2020 09:51:46 PM - humann2.utilities - DEBUG: Using python module : /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py
+05/29/2020 09:51:46 PM - humann2.utilities - INFO: Execute command: /usr/bin/python /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py -any /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp62nzEe -map /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp7WBdrM -report /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpcVhUch -details /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpLh_tg9 -mps /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpp4Nkkd
+05/29/2020 09:51:46 PM - humann2.utilities - DEBUG: Using python module : /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py
+05/29/2020 09:51:46 PM - humann2.utilities - INFO: Execute command: /usr/bin/python /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py -any /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpWkspVP -map /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp7WBdrM -report /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpoOWPaC -details /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpPHcEUk -mps /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpFaQQcC
+05/29/2020 09:51:47 PM - humann2.utilities - DEBUG: Using python module : /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py
+05/29/2020 09:51:47 PM - humann2.utilities - INFO: Execute command: /usr/bin/python /usr/local/lib/python2.7/dist-packages/humann2/quantify/MinPath12hmp.py -any /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp6C__HA -map /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmp7WBdrM -report /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmplhuS6z -details /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmpW15951 -mps /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM/tmptbieNQ
+05/29/2020 09:51:48 PM - humann2.quantify.modules - DEBUG: Compute pathway abundance for bug: g__Bacteroides.s__Bacteroides_vulgatus
+05/29/2020 09:51:48 PM - humann2.quantify.modules - DEBUG: Compute pathway abundance for bug: unclassified
+05/29/2020 09:51:48 PM - humann2.quantify.modules - DEBUG: Compute pathway abundance for bug: all
+05/29/2020 09:51:48 PM - humann2.quantify.modules - DEBUG: Compute pathway abundance for bug: g__Bacteroides.s__Bacteroides_dorei
+05/29/2020 09:51:48 PM - humann2.quantify.modules - DEBUG: Compute pathway coverage for bug: g__Bacteroides.s__Bacteroides_vulgatus
+05/29/2020 09:51:49 PM - humann2.quantify.modules - DEBUG: Compute pathway coverage for bug: unclassified
+05/29/2020 09:51:49 PM - humann2.quantify.modules - DEBUG: Compute pathway coverage for bug: all
+05/29/2020 09:51:49 PM - humann2.quantify.modules - DEBUG: Compute pathway coverage for bug: g__Bacteroides.s__Bacteroides_dorei
+05/29/2020 09:51:49 PM - humann2.quantify.modules - DEBUG: Print pathways _Abundance
+05/29/2020 09:51:49 PM - humann2.quantify.modules - DEBUG: Print pathways _Coverage
+05/29/2020 09:51:49 PM - humann2.humann2 - INFO: TIMESTAMP: Completed 	computing pathways 	:	 9	 seconds
+05/29/2020 09:51:49 PM - humann2.humann2 - INFO: 
+Output files created: 
+/home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_genefamilies.tsv
+/home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_pathabundance.tsv
+/home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_pathcoverage.tsv
+
+05/29/2020 09:51:49 PM - humann2.utilities - DEBUG: Remove directory: /home/mh_user/Desktop/tutorial10/humann2_database_downloads/demo_fastq/demo_humann2_temp/tmpxfA3aM
